@@ -18,3 +18,5 @@ if __name__ == "__main__":
     juan.tecnica = "profundidad"
     juego.insertar(juan)
     juego.run()
+
+
