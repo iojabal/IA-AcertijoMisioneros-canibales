@@ -13,5 +13,8 @@ signal.signal(signal.SIGINT, def_handler)
 if __name__ == "__main__":
     juego = Rio()
     juan = AgenteMapu()
+    juan.estado_inicial = (3,3,1), "Inicio"
+    juan.estado_meta = (0,0,0), "Fin"
+    juan.tecnica = "profundidad"
     juego.insertar(juan)
     juego.run()

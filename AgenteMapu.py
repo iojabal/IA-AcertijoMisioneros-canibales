@@ -51,20 +51,20 @@ class AgenteMapu(AgenteBuscador):
     def test_objetivo(self, e):
         return e[0] == self.estado_meta[0]
 
-    def programa(self):
-        self.pasa_mm()
-        frontera = [[self.estado_inicial]]
-        visitados = []
-        while frontera and not None:
-            camino = frontera.pop()
-            nodo = camino[-1]
-            visitados.append(nodo)
-            if self.test_objetivo(nodo):
-                self.acciones = camino
-                break
-            else:
-                for hijo in self.generar_hijos(nodo):
-                    if hijo not in visitados:
-                        aux = deepcopy(camino)
-                        aux.append(hijo)
-                        frontera.append(aux)
+    # def programa(self):
+    #     self.pasa_mm()
+    #     frontera = [[self.estado_inicial]]
+    #     visitados = []
+    #     while frontera and not None:
+    #         camino = frontera.pop()
+    #         nodo = camino[-1]
+    #         visitados.append(nodo)
+    #         if self.test_objetivo(nodo):
+    #             self.acciones = camino
+    #             break
+    #         else:
+    #             for hijo in self.generar_hijos(nodo):
+    #                 if hijo not in visitados:
+    #                     aux = deepcopy(camino)
+    #                     aux.append(hijo)
+    #                     frontera.append(aux)
